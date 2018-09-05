@@ -6,7 +6,7 @@ MSTSP_NAME = { 'simple1_9', 'simple2_10', 'simple3_10', 'simple4_11', 'simple5_1
 % MSTSP_OPT_LEN = [680	1265	832	803	754	845	130	1344	72	72	78	130	3055	3575	9455	8761	9061	23763	14408	10973	6767	10442	24451	9614	9521];
 % MSTSP_OPT_SIZE = [3	4	13	4	2	4	56	110	4	4	14	196	70	16	72	64	10	20	20	20	4	9	10	36	26];
 MSTSP_BASEPATH = '../benchmark_MSTSP/';
-beta = 0.3;
+beta2 = 0.3;
 
 if isempty(alg_solution)
     fprintf('The number of the solutions is empty.\n');
@@ -45,7 +45,7 @@ FP =  size(flag_alg, 1) - TP;
 FN = size(flag_mstsp, 1) - sum(flag_mstsp);
 P = TP / (TP + FP);
 R = TP / (TP + FN);
-Fbeta = (1+beta^2)*P*R /((beta^2)*P + R);
+Fbeta = (1+beta2)*P*R /((beta2)*P + R);
 if isnan(Fbeta)
     Fbeta = 0;
 end
