@@ -36,5 +36,5 @@ Run the **MSTSP_demo.m**, and you will see the evaluation results for randomly g
 
 \* For more information please refer to the Technical Report of Multi-solution Traveling Salesman Problem [1]. Besides, a niching memetic algorithm is proposed to solve the MSTSPs [2].  Any comments and suggestions are welcome.
 
-[1] T. Huang, Y.-J. Gong and J. Zhang, “Seeking Multiple Solutions of Combinatorial Optimization Problems: A Proof of Principle Study,” in 2018 IEEE Symposium Series on Computational Intelligence (SSCI), 2018.
+[1] T. Huang, Y.-J. Gong and J. Zhang, “Seeking Multiple Solutions of Combinatorial Optimization Problems: A Proof of Principle Study,” in 2018 IEEE Symposium Series on Computational Intelligence (SSCI), 2018. <br>
 [2] T. Huang, Y. Gong, S. Kwong, H. Wang and J. Zhang, “A Niching Memetic Algorithm for Multi-Solution Traveling Salesman Problem,” IEEE Transactions on Evolutionary Computation. DOI: 10.1109/TEVC.2019.2936440.
