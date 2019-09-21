@@ -1649,6 +1649,7 @@ int main(int argc, char* argv[])
 		"eil51","berlin52","st70", "pr76", "kroA100", "lin105"	//31-36
 	};
 	input_dir = "./benchmark_MSTSP/";
+	//input_dir = "./TSPLIB-ms/"
 	int FUNC_BEGIN = atoi(argv[1]);
 	int FUNC_END = atoi(argv[2]);
 	int RUNS = atoi(argv[3]);
