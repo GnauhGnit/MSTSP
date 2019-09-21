@@ -1638,7 +1638,7 @@ int main(int argc, char* argv[])
 	int MaxFES[] = { 60000,60000,60000,60000,60000,60000,60000,60000,60000,60000,60000,60000, // 1- 12
 		1200000,1200000,1200000,1200000,1200000,1200000,1200000 , //13-19
 		1200000, 1200000, 1200000, 1200000, 1200000, 1200000, 0, 0, 0, 0,0,	 // 20-30
-		0, 0, 0, 0, 0, 0, 0	,0, 0, 0, 0				// 31-38
+		0, 0, 0, 0, 0, 0, 0	,0, 0, 0, 0				
 	};
 
 	string Func_name[] = {
@@ -1646,7 +1646,7 @@ int main(int argc, char* argv[])
 		"geometry1_10", "geometry2_12", "geometry3_10", "geometry4_10", "geometry5_10", "geometry6_15",	//7-12
 		"composite1_28", "composite2_34", "composite3_22", "composite4_33", "composite5_35",  "composite7_42", "composite8_60" ,	 //13-19
 		"composite6_39", "composite8_45", "composite9_48", "composite10_55", "composite11_59","composite13_66", "", "", "", "",	"",//20 - 25
-		"att48","eil51","berlin52","st70","eil76", "pr76", "eil101","kroA100", "lin105", "kroA150", "lin318"	//31-41
+		"eil51","berlin52","st70", "pr76", "kroA100", "lin105"	//31-36
 	};
 	input_dir = "./benchmark_MSTSP/";
 	int FUNC_BEGIN = atoi(argv[1]);
