@@ -1,0 +1,30 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>未知 </title></head><body>
+<h1 id="multi-solution-traveling-salesman-problem-mstsp">Multi-solution Traveling Salesman Problem (MSTSP)</h1>
+<h2 id="1-introduction">1. Introduction</h2>
+<p>Multi-solution Traveling Salesman Problem (MSTSP) is essentially a TSP, but the one with multiple optimal solutions. This benchmark included 25 MSTSPs. The number of cities ranges from 9 to 66, and the number of optimal solutions ranges from 4 to 196. The algorithms used to solve MSTSPs are required to provide a solution set. These candidate solutions are further evaluated with two indicators, i.e., Fbeta and Diversity Indicator (DI). Fbeta measures the solution quality, and DI measures the solution diversity. </p>
+<h2 id="2-documents">2. Documents</h2>
+<p>In this directory, there are two folders. The benchmark_MSTSP folder contains MSTSP instances and their optimal solutions. The demo folder provides a demo implemented in MATLAB to show how to evaluate the obtained solutions. The details are listed in the following. </p>
+<p>The benchmark_MSTSP folder includes the following files: <br>
+<strong><instance_name>.tsp</strong> <br>
+<strong><instance_name>.solution</strong> <br>
+in which: <br>
+    <strong><instance_name>:</strong> <br>
+is the name of MSTSP instance corresponding to the class, the index and the number of city of the instance. For example, the name of the first instance, which is a simple MSTSP with 9 cities, names <strong>simple1_9.tsp</strong> <br>
+<strong><instance_name>.tsp</strong> <br>
+        The file contains the two-dimensional coordinates of the cities in <strong>simple1_9</strong>. Every row has two numbers, which are the abscissa and the ordinate. The number of rows is exactly the number of cities. <br>
+<strong><instance_name>.solution</strong> <br>
+        The file contains all the optimal solutions of <instance_name>. Every row lists one optimal solution. The first number is the tour length of this tour, and the remaining numbers construct the permutation of this optimal solution. The number of rows represents the number of optimal solutions of <instance_name>. <br></p>
+<p>The demo folder includes the following MATLAB files:<br>
+<strong>measure_share_dist.m</strong> <br>
+    The file is a MATLAB code to compute the share distance between two solutions. <br>
+<strong>MSTSP_measure.m</strong> <br>
+        The file is a MALAB code to input obtained solutions and <instance_name> index, and then return their Fbeta and DI. <br>
+<strong>MSTSP_demo.m</strong> <br>
+        The file is a MATLAB code to demonstrate how to evaluate benchmark suite of MSTSP. </p>
+<h2 id="3-how-to-use">3. How to use</h2>
+<p>Run the <strong>MSTSP_demo.m</strong>, and you will see the evaluation results for randomly generated solutions. </p>
+<hr />
+<p>* For more information, please visit the <a href="https://gnauhgnit.github.io/">website of MSTSP</a> or refer to our published works on MSTSP [1], [2]. Any comments and suggestions are welcome.</p>
+<p>[1]: T. Huang, Y.-J. Gong and J. Zhang, “Seeking Multiple Solutions of Combinatorial Optimization Problems: A Proof of Principle Study,” in 2018 IEEE Symposium Series on Computational Intelligence (SSCI), 2018. <br>
+[2]: T. Huang, Y. Gong, S. Kwong, H. Wang and J. Zhang, “A Niching Memetic Algorithm for Multi-Solution Traveling Salesman Problem,” IEEE Transactions on Evolutionary Computation. DOI: 10.1109/TEVC.2019.2936440.</p>
+</body></html>

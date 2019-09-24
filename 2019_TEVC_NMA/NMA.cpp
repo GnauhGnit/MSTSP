@@ -1,5 +1,5 @@
 ﻿/**
-*  Copyright (c) 2018 SCUT
+*  Copyright (c) 2019 SCUT
 *  All rights reserved.
 *
 *  @author      Ting Huang (cshting@mail.scut.edu.cn)
@@ -9,10 +9,6 @@
 *
 *  @version
 *	- V6: minor modifications
-*
-*  @command
-*		[begin Index] [end index] [runs] [NP] [crossover rate] [mutation rate] [dir] [selection strategy] [crossover strategey] [mutation strategy]
-*		 0 24 50 150 0.9 0.01 .\Results roulette critical_PMX NicheEM 2-opt
 *
 *	@reference
 *		T. Huang, Y. Gong, S. Kwong, H. Wang and J. Zhang, “A Niching Memetic Algorithm for Multi-Solution Traveling Salesman Problem,” IEEE Transactions on Evolutionary Computation. DOI: 10.1109/TEVC.2019.2936440.
@@ -1636,31 +1632,32 @@ int main(int argc, char* argv[])
 {
 	int Func_index[] = { 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39, 40, 41 };
 	int MaxFES[] = { 60000,60000,60000,60000,60000,60000,60000,60000,60000,60000,60000,60000, // 1- 12
-		1200000,1200000,1200000,1200000,1200000,1200000,1200000 , //13-19
-		1200000, 1200000, 1200000, 1200000, 1200000, 1200000, 0, 0, 0, 0,0,	 // 20-30
+		1200000,1200000,1200000,1200000,1200000,1200000,1200000 , 
+		1200000, 1200000, 1200000, 1200000, 1200000, 1200000, 0, 0, 0, 0,0,	 
 		0, 0, 0, 0, 0, 0, 0	,0, 0, 0, 0				
 	};
 
 	string Func_name[] = {
 		"simple1_9", "simple2_10", "simple3_10", "simple4_11", "simple5_12", "simple6_12",			//1-6
 		"geometry1_10", "geometry2_12", "geometry3_10", "geometry4_10", "geometry5_10", "geometry6_15",	//7-12
-		"composite1_28", "composite2_34", "composite3_22", "composite4_33", "composite5_35",  "composite7_42", "composite8_60" ,	 //13-19
-		"composite6_39", "composite8_45", "composite9_48", "composite10_55", "composite11_59","composite13_66", "", "", "", "",	"",//20 - 25
-		"eil51","berlin52","st70", "pr76", "kroA100", "lin105"	//31-36
+		"composite1_28", "composite2_34", "composite3_22", "composite4_33", "composite5_35", "composite6_39",	
+		"composite7_42", "composite8_45", "composite9_48",  "composite10_55", "composite11_59","composite12_60", "composite13_66",
+		"", "", "", "",	"", 
+		"eil51","berlin52","st70", "pr76", "kroA100", "lin105"	
 	};
 	input_dir = "./benchmark_MSTSP/";
 	//input_dir = "./TSPLIB-ms/"
-	int FUNC_BEGIN = atoi(argv[1]);
-	int FUNC_END = atoi(argv[2]);
-	int RUNS = atoi(argv[3]);
-	int NP = atoi(argv[4]);
-	double  crossover_ratio = atof(argv[5]);
-	double mutation_ratio = atof(argv[6]);
-	output_dir = "./" + string(argv[7]) + "/";
-	string selection_operator = string(argv[8]);
-	string crossover_operator = string(argv[9]);
-	string mutation_operator = string(argv[10]);
-	string ls_operator = string(argv[11]);
+	int FUNC_BEGIN = 0;
+	int FUNC_END = 24;
+	int RUNS = 50;
+	int NP = 150;
+	double  crossover_ratio = 0.9;
+	double mutation_ratio = 0.01;
+	output_dir = "./Results/";
+	string selection_operator = "roulette";
+	string crossover_operator = "critical_PMX";
+	string mutation_operator = "NicheEM";
+	string ls_operator = "2-opt";
 	int species_size = -1;
 	int MAX_ITER = -1;
 
