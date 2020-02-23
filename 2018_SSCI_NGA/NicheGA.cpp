@@ -823,7 +823,7 @@ int main(int argc, char* argv[])
 	int FUNC_END = 24;
 	int RUNS = 50;
 	int MAX_ITER = -1;
-	int NP = 1;
+	int NP = 150;
 	double  crossover_ratio = 0.9;
 	double mutation_ratio = 0.1;
 	output_dir = "./Results/";
